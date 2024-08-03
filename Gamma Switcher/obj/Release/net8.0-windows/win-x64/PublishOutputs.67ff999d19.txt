@@ -1,0 +1,8 @@
+C:\Users\Vincent\Desktop\Gamma Switcher\Gamma Switcher.pdb
+C:\Users\Vincent\Desktop\Gamma Switcher\icon.ico
+C:\Users\Vincent\Desktop\Gamma Switcher\D3DCompiler_47_cor3.dll
+C:\Users\Vincent\Desktop\Gamma Switcher\PenImc_cor3.dll
+C:\Users\Vincent\Desktop\Gamma Switcher\PresentationNative_cor3.dll
+C:\Users\Vincent\Desktop\Gamma Switcher\vcruntime140_cor3.dll
+C:\Users\Vincent\Desktop\Gamma Switcher\wpfgfx_cor3.dll
+C:\Users\Vincent\Desktop\Gamma Switcher\Gamma Switcher.exe
