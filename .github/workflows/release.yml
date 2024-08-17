@@ -58,7 +58,7 @@ jobs:
 
       - name: Publish
         run: |
-          dotnet publish "./Gamma Switcher.csproj" \
+          dotnet publish "./Gamma Switcher/Gamma Switcher.csproj" \
             --configuration Release \
             --framework net8.0-windows \
             --runtime win-x64 \
