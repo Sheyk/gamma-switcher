@@ -8,23 +8,24 @@
         <UseWindowsForms>true</UseWindowsForms>
         <ImplicitUsings>enable</ImplicitUsings>
         <ApplicationIcon>icon.ico</ApplicationIcon>
+        <EnableWindowsTargeting>true</EnableWindowsTargeting>
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Update="App.cs">
-        <SubType>Form</SubType>
-      </Compile>
+        <Compile Update="App.cs">
+            <SubType>Form</SubType>
+        </Compile>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.7" />
-      <PackageReference Include="NvAPIWrapper.Net" Version="0.8.1.101" />
+        <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.7"/>
+        <PackageReference Include="NvAPIWrapper.Net" Version="0.8.1.101"/>
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="icon.ico">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
+        <None Update="icon.ico">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
 </Project>
