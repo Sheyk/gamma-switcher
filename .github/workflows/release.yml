@@ -57,7 +57,17 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Publish
-        run: dotnet publish --configuration Release --no-restore --output ./output
+        run: |
+          dotnet publish "./Gamma Switcher.csproj" \
+            --configuration Release \
+            --framework net8.0-windows \
+            --runtime win-x64 \
+            --self-contained \
+            /p:PublishSingleFile=true \
+            /p:PublishTrimmed=false \
+            /p:ReadyToRun=false \
+            /p:IncludeNativeLibrariesForSelfExtract=false \
+            --output ./output
 
       - name: Zip the output directory
         run: zip -r gamma-switcher-win64-${{ env.NEW_VERSION }}.zip ./output
