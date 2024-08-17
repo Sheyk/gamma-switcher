@@ -1,5 +1,6 @@
-﻿using System.Text.Json;
-namespace EftSettings;
+﻿using Gamma_Switcher.Gammas;
+using System.Text.Json;
+namespace Gamma_Switcher;
 
 public static class ConfigFile
 {

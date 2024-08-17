@@ -1,10 +1,12 @@
-using EftSettings;
+using Gamma_Switcher.Gammas;
+using Gamma_Switcher.Peace;
+using Gamma_Switcher.Sonar;
 namespace Gamma_Switcher;
 
-static class Program
+internal static class Program
 {
     [STAThread]
-    static void Main()
+    private static void Main()
     {
         var configFile = ConfigFile.Read();
 
@@ -25,12 +27,19 @@ static class Program
             ConfigFile.Write(configFile);
             return;
         }
-        
+
         using var mutex = new Mutex(true, "Gamma Switcher", out var createdNew);
 
-        if (!createdNew)  return; // App already running
+        if (!createdNew) return; // App already running
 
-        Application.Run(new App(configFile));
+        var windowTracker = new WindowChangeTracker([
+            new GammaObserver(configFile),
+            new SonarObserver(new SonarRepository()),
+            new PeaceObserver()
+        ]);
 
+        var app = new App(windowTracker);
+
+        Application.Run(app);
     }
 }

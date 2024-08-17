@@ -1,0 +1,87 @@
+# Ignore Visual Studio temporary files, build results, and
+# folder containing source control bindings
+.vscode/
+.vs/
+.vscode/*
+.vs/*
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+ServiceFabricBackup/
+*.ncb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rptproj.rsuser
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.designer.cs
+*.g.cs
+*.g.i.cs
+*.g.dart
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Aa][Rr][Cc]h64/
+bld/
+
+[Ll]og/
+
+# Uncomment if you have tasks that create the project's nuget packages in these folders
+# **/packages/*
+
+# Ignore git deploy
+deploy/
+
+# Ignore NuGet packages
+*.nupkg
+*.snupkg
+.nuget/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/*
+
+# Rider directories
+.idea/
+*.sln.iml
+
+# Mono auto generated files
+mono_crash.*
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# DotNet Pack Generated Files
+**/project.lock.json
+**/project.fragment.lock.json
