@@ -45,16 +45,6 @@ jobs:
           git tag -a "v${{ env.NEW_VERSION }}" -m "Release version ${{ env.NEW_VERSION }}"
           git push origin "v${{ env.NEW_VERSION }}"
 
-      - name: Create GitHub Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: 'v${{ env.NEW_VERSION }}'
-          release_name: 'v${{ env.NEW_VERSION }}'
-          draft: false
-          prerelease: false
-
       - name: Set up .NET
         uses: actions/setup-dotnet@v3
         with:
@@ -71,6 +61,17 @@ jobs:
 
       - name: Zip the output directory
         run: zip -r gamma-switcher-win64-${{ env.VERSION }}.zip ./output
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: 'v${{ env.NEW_VERSION }}'
+          release_name: 'v${{ env.NEW_VERSION }}'
+          draft: false
+          prerelease: false
 
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
